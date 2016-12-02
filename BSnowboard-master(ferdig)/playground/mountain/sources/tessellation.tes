@@ -1,0 +1,18 @@
+#version 410 core
+
+layout(quads, equal_spacing, ccw) in;
+
+out vec3 varposition;
+out vec3 varnormal;
+
+void main()
+{
+    vec4 position = gl_in[0].gl_Position;
+    position.xy += gl_TessCoord.xy * 2.0 - 1.0;
+
+	vec4 co = gl_ModelViewMatrix * position;
+
+    varposition = co.xyz;
+	varnormal = normalize(gl_NormalMatrix * vec3(0.0, 0.0, 1.0));
+	gl_Position = gl_ProjectionMatrix * co;
+}

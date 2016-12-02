@@ -1,0 +1,3 @@
+snowboarder = bpy.data.objects["Snowboarder"]
+loc, rot, scale = snowboarder.matrix_world.decompose()
+print(rot)

@@ -1,0 +1,4 @@
+append gjør at du legger til tekst istedenfor å overskrive, benytter da "a" når tekstfilen skrives i python
+for å overwrite hver gang benyttes "w" når tekstfilen skrives i python
+
+for å finne ut hvilke metoder som er tilgjengelig, bruk dir() rundt det du vil finne ut om
